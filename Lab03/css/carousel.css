@@ -1,0 +1,104 @@
+/* Carousel Hero - Phù hợp theme Furina/ pastel */
+#heroCarousel {
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(13, 202, 240, 0.15);
+}
+
+.carousel-item img {
+    height: 65vh;
+    /* Cao vừa phải, đẹp trên desktop & mobile */
+    object-fit: cover;
+    object-position: center;
+}
+
+.carousel-caption {
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.65), transparent 70%);
+    padding: 2rem 1rem;
+    border-radius: 12px 12px 0 0;
+    bottom: 0;
+    text-align: center;
+}
+
+.carousel-caption h5 {
+    font-size: 2.2rem;
+    margin-bottom: 0.5rem;
+    color: #e3f2fd;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+}
+
+.carousel-caption p {
+    font-size: 1.2rem;
+    color: #b2ebf2;
+    text-shadow: 1px 1px 6px rgba(0, 0, 0, 0.6);
+    margin-bottom: 0;
+}
+
+/* Nút prev/next - Màu info */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background-color: rgba(13, 202, 240, 0.4);
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    background-size: 60%;
+    transition: all 0.3s;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+    opacity: 0.8;
+}
+
+.carousel-control-prev:hover,
+.carousel-control-next:hover {
+    opacity: 1;
+}
+
+/* Indicators - Chấm tròn xinh */
+.carousel-indicators [data-bs-target] {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: #0dcaf0;
+    opacity: 0.6;
+    margin: 0 6px;
+}
+
+.carousel-indicators .active {
+    opacity: 1;
+    background-color: #0d6efd;
+    transform: scale(1.2);
+}
+
+/* Mobile nhỏ hơn */
+@media (max-width: 768px) {
+    .carousel-item img {
+        height: 50vh;
+    }
+
+    .carousel-caption h5 {
+        font-size: 1.6rem;
+    }
+
+    .carousel-caption p {
+        font-size: 1rem;
+    }
+}
+
+.carousel-caption h5,
+.carousel-caption p {
+    animation: fadeInUp 1.2s ease-out;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

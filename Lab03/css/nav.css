@@ -1,0 +1,43 @@
+.navbar {
+    background-color: #e3f2fd !important;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.navbar .nav-link {
+    color: #212529 !important;
+    font-weight: 500;
+    padding: 0.5rem 1rem !important;
+}
+
+.navbar .nav-link:hover,
+.navbar .nav-link.active {
+    color: #0dcaf0 !important;
+}
+
+.navbar .dropdown-menu {
+    background-color: #e3f2fd;
+    border: none;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.navbar .dropdown-item:hover {
+    background-color: #b2ebf2;
+    color: #0dcaf0 !important;
+}
+
+.navbar-toggler {
+    border-color: #0dcaf0;
+}
+
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='%230dcaf0' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+@media (max-width: 576px) {
+    .navbar-collapse {
+        background-color: #e3f2fd;
+        padding: 1rem;
+        border-radius: 8px;
+        margin-top: 0.5rem;
+    }
+}

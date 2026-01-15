@@ -1,0 +1,38 @@
+ body {
+     background-color: #f8f9fa;
+ }
+
+ .profile-img {
+     width: 100%;
+     height: 300px;
+     object-fit: cover;
+ }
+
+ .blog-card img {
+     width: 100%;
+     height: 250px;
+     object-fit: cover;
+     border-radius: 8px;
+ }
+
+ .category-link {
+     color: inherit;
+     text-decoration: none;
+ }
+
+ .category-link:hover {
+     color: #0dcaf0;
+ }
+
+ .quote {
+     font-style: italic;
+     text-align: center;
+     margin-top: 10px;
+ }
+
+ .comment-icon {
+     color: #6c757d;
+     margin-left: 8px;
+ }
+
+ 
