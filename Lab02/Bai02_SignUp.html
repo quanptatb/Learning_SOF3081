@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div class="container py-5">
+        <div class="row justify-content-center">
+            <div class="col-md-8 col-lg-6">
+                <div class="card shadow-sm">
+                    <div class="card-header bg-primary text-white text-center">
+                        <h3 class="mb-0">Form Đăng Ký Thông Tin</h3>
+                    </div>
+                    <div class="card-body p-4">
+                        <form action="#" method="post" novalidate>
+                            <!-- Họ và Tên -->
+                            <div class="mb-3">
+                                <label for="fullname" class="form-label">Họ và Tên</label>
+                                <input type="text" class="form-control" id="fullname" name="fullname" required>
+                                <div class="invalid-feedback">Vui lòng nhập họ và tên.</div>
+                            </div>
+
+                            <!-- Email -->
+                            <div class="mb-3">
+                                <label for="email" class="form-label">Email</label>
+                                <input type="email" class="form-control" id="email" name="email" required>
+                                <div class="invalid-feedback">Vui lòng nhập email hợp lệ.</div>
+                            </div>
+
+                            <!-- Số Điện Thoại -->
+                            <div class="mb-3">
+                                <label for="sdt" class="form-label">Số Điện Thoại</label>
+                                <input type="tel" class="form-control" id="sdt" name="sdt" required>
+                                <div class="invalid-feedback">Vui lòng nhập số điện thoại.</div>
+                            </div>
+
+                            <!-- Mật Khẩu -->
+                            <div class="mb-3">
+                                <label for="password" class="form-label">Mật Khẩu</label>
+                                <input type="password" class="form-control" id="password" name="password" required>
+                                <div class="invalid-feedback">Vui lòng nhập mật khẩu.</div>
+                            </div>
+
+                            <!-- Xác Nhận Mật Khẩu -->
+                            <div class="mb-3">
+                                <label for="confirm_password" class="form-label">Xác Nhận Mật Khẩu</label>
+                                <input type="password" class="form-control" id="confirm_password"
+                                    name="confirm_password" required>
+                                <div class="invalid-feedback">Vui lòng xác nhận mật khẩu.</div>
+                            </div>
+
+                            <!-- Giới Tính -->
+                            <div class="mb-3">
+                                <label class="form-label">Giới Tính</label>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="gender" id="male" value="male"
+                                        required>
+                                    <label class="form-check-label" for="male">Nam</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="gender" id="female"
+                                        value="female" required>
+                                    <label class="form-check-label" for="female">Nữ</label>
+                                </div>
+                                <div class="invalid-feedback">Vui lòng chọn giới tính.</div>
+                            </div>
+
+                            <!-- Ngôn Ngữ -->
+                            <div class="mb-4">
+                                <label for="language" class="form-label">Ngôn Ngữ</label>
+                                <select class="form-select" id="language" name="language" required>
+                                    <option value="" disabled selected>Chọn ngôn ngữ</option>
+                                    <option value="vietnamese">Tiếng Việt</option>
+                                    <option value="english">Tiếng Anh</option>
+                                    <option value="japanese">Tiếng Nhật</option>
+                                </select>
+                                <div class="invalid-feedback">Vui lòng chọn ngôn ngữ.</div>
+                            </div>
+
+                            <!-- Nút Submit -->
+                            <div class="d-grid">
+                                <button type="submit" class="btn btn-primary btn-lg">Đăng Ký</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Kích hoạt validation Bootstrap -->
+    <script>
+        // Enable Bootstrap validation
+        (() => {
+            'use strict'
+            const forms = document.querySelectorAll('form')
+            Array.from(forms).forEach(form => {
+                form.addEventListener('submit', event => {
+                    if (!form.checkValidity()) {
+                        event.preventDefault()
+                        event.stopPropagation()
+                    }
+                    form.classList.add('was-validated')
+                }, false)
+            })
+        })()
+    </script>
+</body>
+
+</html>
