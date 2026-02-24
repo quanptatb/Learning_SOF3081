@@ -17,8 +17,8 @@ import btnupdate from './components/Bai01.vue';
 import btninput from './components/Bai02.vue';
 import forminput from './components/Bai03.vue';
 import { ref } from 'vue';
-import CreatePost from './components/CreatePost.vue';
-import PostList from './components/PostList.vue';
+import CreatePost from './components/Bai04/CreatePost.vue';
+import PostList from './components/Bai04/PostList.vue';
 const posts = ref([]);
 function addPost(post) {
   posts.value.push(post);
